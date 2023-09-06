@@ -1,0 +1,11 @@
+Resources:
+  MyGlueJob:
+    Type: "AWS::Glue::Job"
+    Properties: 
+      Command: 
+        Name: "glueetl"
+        ScriptLocation: "s3://demo-gitops-glue-345205765782/src/script.py"
+      Role: "arn:aws:iam::345205765782:role/DemoGitOpsGlueJobRole"
+      DefaultArguments: 
+        "--job-language": "python"
+      Name: "demo-gitops-glue-job"
