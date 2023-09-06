@@ -7,6 +7,6 @@ Resources:
         ScriptLocation: "s3://demo-gitops-glue-345205765782/src/script.py"
       Role: "arn:aws:iam::345205765782:role/DemoGitOpsGlueJobRole"
       DefaultArguments: 
-        "--job-language": "python"
-        "--glue-version": "3.0"
+        "--job-language": "Python 3"
       Name: "demo-gitops-glue-job"
+      GlueVersion: "3.0"
