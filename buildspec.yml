@@ -1,0 +1,12 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing AWS CLI...
+      - apt-get update -y
+      - apt-get install -y awscli
+  build:
+    commands:
+      - echo Validating CloudFormation templates...
+      - aws cloudformation validate-template --template-body file://glue-job.yaml
