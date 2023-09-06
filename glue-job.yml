@@ -8,4 +8,5 @@ Resources:
       Role: "arn:aws:iam::345205765782:role/DemoGitOpsGlueJobRole"
       DefaultArguments: 
         "--job-language": "python"
+        "--glue-version": "3.0"
       Name: "demo-gitops-glue-job"
