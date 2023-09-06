@@ -12,4 +12,8 @@ phases:
       - aws cloudformation validate-template --template-body file://iam-policies.yml
       - echo Validating CloudFormation templates...
       - aws cloudformation validate-template --template-body file://glue-job.yml
-      
+
+artifacts:
+  files:
+    - iam-policies.yml
+    - glue-job.yml
