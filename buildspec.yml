@@ -8,5 +8,8 @@ phases:
       - yum install -y awscli
   build:
     commands:
+      - echo Validating IAM policies...
+      - aws cloudformation validate-template --template-body file://iam-policies.yml
       - echo Validating CloudFormation templates...
-      - aws cloudformation validate-template --template-body file://glue-job.yaml
+      - aws cloudformation validate-template --template-body file://glue-job.yml
+      
